@@ -12,7 +12,7 @@ class Grid2d():
     
     def get_value_at(self,i,j):
         res = -1
-        if 0 <= i <self.xdim and 0 < j < self.ydim :
+        if 0 <= i <self.xdim and 0 <= j < self.ydim :
             res=self.tab[i][j]
         else:
             res=-1
@@ -29,7 +29,7 @@ class Grid2d():
     def get_neighs_values(self,i,j):
         """Return a list of all neighbours values (i,j include)"""
         res=[]
-        if 0 <= i <self.xdim and 0 < j < self.ydim :
+        if 0 <= i <self.xdim and 0 <= j < self.ydim :
             for ineigh in [-1,0,1]:
                 if 0 <= i + ineigh <self.xdim :
                     for jneigh in [-1,0,1] :
